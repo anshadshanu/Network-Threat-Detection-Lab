@@ -39,27 +39,9 @@ Kali Linux → Attack Simulation → Windows Server 2022 → Wazuh SIEM / Snort 
 
 ## Screenshots
 
-### Wazuh Dashboard — Home
-![Wazuh Dashboard](Screenshots/01_wazuh_dashboard_home.png)
-*Wazuh dashboard home showing all monitoring modules — Security Information Management, Auditing, Threat Detection, and Regulatory Compliance.*
-
----
-
 ### Wazuh Agent — Windows Server Active
 ![Wazuh Active Agent](Screenshots/02_wazuh_winserver_active_agent.png)
 *Windows Server 2022 agent (ID:001) successfully connected and active on Wazuh Manager at 192.168.52.139, running Wazuh v4.7.5.*
-
----
-
-### Snort IDS — Config Validation
-![Snort Config](Screenshots/03_snort_config_validation.png)
-*Snort successfully validated the configuration — all preprocessors loaded and rules engine ready for live detection.*
-
----
-
-### Snort IDS — Custom Detection Rules
-![Snort Rules](Screenshots/04_snort_custom_rules.png)
-*Three custom rules written in /etc/snort/rules/local.rules covering Nmap SYN scan (SID:1000001), RDP brute force (SID:1000002), and DNS volume (SID:1000003).*
 
 ---
 
@@ -69,33 +51,21 @@ Kali Linux → Attack Simulation → Windows Server 2022 → Wazuh SIEM / Snort 
 
 ---
 
-### Attack 2 — RDP Brute Force Detected by Snort
-![Snort RDP](Screenshots/06_snort_rdp_bruteforce_alert.png)
-*Snort console showing SID:1000002 "RDP brute force attempt" and MISC MS Terminal server requests firing on port 3389 — MITRE ATT&CK T1110.001.*
-
----
-
 ### Attack 2 — RDP Brute Force Detected by Wazuh
 ![Wazuh Brute Force](Screenshots/07_wazuh_bruteforce_events.png)
-*Wazuh Security Events showing Rule 60122 (Level 5) logon failures — "Logon failure - Unknown user or bad password" — mapped to MITRE T1078 and T1531.*
+*Wazuh Security Events showing Rule 60122 (Level 5) logon failures mapped to MITRE T1078 and T1531 — EventCode 4625 detected in bulk.*
 
 ---
 
 ### Attack 3 — DNS C2 Traffic Captured in Wireshark
 ![Wireshark DNS](Screenshots/08_wireshark_dns_capture.png)
-*Wireshark PCAP showing 108 DNS packets with queries to malware-c2-*.evil.com — randomized subdomains and high query volume are key IOCs for DNS tunneling.*
+*Wireshark PCAP showing 108 DNS packets with queries to malware-c2-*.evil.com — randomized subdomains are key IOCs for DNS tunneling.*
 
 ---
 
 ### MITRE ATT&CK Dashboard
 ![MITRE Dashboard](Screenshots/09_wazuh_mitre_attack.png)
-*Wazuh MITRE ATT&CK module showing alert evolution spike during attack phase, top tactics, attacks by technique, and per-agent technique breakdown.*
-
----
-
-### Wazuh Security Events Overview
-![Security Events](Screenshots/10_wazuh_security_events.png)
-*642 total alerts — 5 authentication failures, 68 authentication successes — with alert level spike visible at 03:00 during attack execution.*
+*Wazuh MITRE ATT&CK module showing alert evolution spike during attack phase, top tactics, and per-agent technique breakdown.*
 
 ---
 
