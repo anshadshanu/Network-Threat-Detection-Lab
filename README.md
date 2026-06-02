@@ -160,7 +160,7 @@ alert udp any any -> any 53 (msg:"Suspicious DNS query volume"; threshold:type t
 
 **Muhammed Anshad V**  
 Certified SOC Analyst (CSA v2) – EC-Council  
-[LinkedIn](https://linkedin.com/in/muhemmed-a501a0) | [GitHub](https://github.com/anshadshanu)
+[LinkedIn](www.linkedin.com/in/muhemmedanshad) | [GitHub](https://github.com/anshadshanu)
 
 ---
 
